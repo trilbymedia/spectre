@@ -22,10 +22,9 @@ Read [the documentation](https://picturepan2.github.io/spectre/getting-started.h
 There are 5 ways to get started with Spectre CSS framework in your projects. You can either manually install or use NPM, Yarn and Bower.
 
 ##### Install manually
-<<<<<<< HEAD
+
 Download the compiled and minified [Spectre CSS file](https://github.com/trilbymedia/spectre-scss/tree/master/docs/dist).
-=======
-Download the compiled and minified [Spectre CSS file](https://github.com/picturepan2/spectre/tree/master/docs/dist). And include `spectre.css` located in `/docs/dist` in your website or Web app &lt;head&gt; part.
+ And include `spectre.css` located in `/docs/dist` in your website or Web app &lt;head&gt; part.
 
 `<link rel="stylesheet" href="spectre.min.css" />`
 
