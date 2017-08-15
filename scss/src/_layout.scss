@@ -31,7 +31,6 @@
 // Responsive grid system
 .columns {
   display: flex;
-  display: -webkit-flex;
   flex-wrap: wrap;
   margin-left: -$layout-spacing;
   margin-right: -$layout-spacing;
