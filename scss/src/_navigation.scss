@@ -4,10 +4,10 @@
 .pagination,
 .nav {
   list-style: none;
-  margin: .5rem 0;
+  margin: $unit-1 0;
 }
 
-@import 'breadcrumbs';
-@import 'tabs';
-@import 'pagination';
-@import 'navs';
+@import 'breadcrumbs.scss';
+@import 'tabs.scss';
+@import 'pagination.scss';
+@import 'navs.scss';

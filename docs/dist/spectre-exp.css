@@ -1,26 +1,4 @@
 /*! Spectre.css Experimentals | MIT License | github.com/picturepan2/spectre */
-<<<<<<< HEAD
-.accordion .accordion-item input:checked ~ .accordion-body {
-  max-height: 100rem;
-  transition: max-height 3s ease;
-}
-
-.accordion .accordion-item .accordion-header {
-  background: #f8f9fa;
-  display: block;
-  padding: 1rem 1.6rem;
-}
-
-.accordion .accordion-item .accordion-body {
-  margin-bottom: .8rem;
-  max-height: 0;
-  overflow: hidden;
-  padding: .2rem .8rem;
-  transition: max-height .3s ease;
-}
-
-=======
->>>>>>> upstream
 .calendar {
   border: .05rem solid #e7e9ed;
   border-radius: .1rem;
@@ -29,30 +7,35 @@
   text-align: center;
 }
 .calendar .calendar-nav {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #f8f9fa;
   border-top-left-radius: .1rem;
   border-top-right-radius: .1rem;
-  display: flex;
+  display: -webkit-box;
   display: -ms-flexbox;
-  -ms-flex-align: center;
+  display: flex;
   font-size: .8rem;
   padding: .4rem;
 }
 .calendar .calendar-header,
 .calendar .calendar-body {
-  display: flex;
+  display: -webkit-box;
   display: -ms-flexbox;
-  -ms-flex-pack: center;
+  display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  justify-content: center;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: .4rem 0;
 }
 .calendar .calendar-header .calendar-date,
 .calendar .calendar-body .calendar-date {
-  -ms-flex: 0 0 14.28%;
-  flex: 0 0 14.28%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14.28%;
+          flex: 0 0 14.28%;
   max-width: 14.28%;
 }
 .calendar .calendar-header {
@@ -70,8 +53,8 @@
 }
 .calendar .calendar-date .date-item {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: transparent;
   border: .05rem solid transparent;
   border-radius: 50%;
@@ -84,6 +67,8 @@
   position: relative;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
   transition: all .2s ease;
   vertical-align: middle;
   white-space: nowrap;
@@ -94,7 +79,8 @@
   color: #5764c6;
 }
 .calendar .calendar-date .date-item:focus {
-  box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
+  -webkit-box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
+          box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
 }
 .calendar .calendar-date .date-item:focus,
 .calendar .calendar-date .date-item:hover {
@@ -111,16 +97,11 @@
 }
 .calendar .calendar-date .date-item.badge::after {
   position: absolute;
-<<<<<<< HEAD
-  right: .3rem;
-  top: .3rem;
-=======
   right: 3px;
   top: 3px;
   -webkit-transform: translate(50%, -50%);
-  -ms-transform: translate(50%, -50%);
->>>>>>> upstream
-  transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
 }
 .calendar .calendar-date.disabled .date-item,
 .calendar .calendar-date.disabled .calendar-event,
@@ -141,7 +122,9 @@
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .calendar .calendar-range.range-start::before {
   left: 50%;
@@ -158,10 +141,13 @@
 .calendar.calendar-lg .calendar-body .calendar-date {
   border-bottom: .05rem solid #e7e9ed;
   border-right: .05rem solid #e7e9ed;
-  display: flex;
+  display: -webkit-box;
   display: -ms-flexbox;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 5.5rem;
   padding: 0;
 }
@@ -172,8 +158,8 @@
   border-bottom: 0;
 }
 .calendar.calendar-lg .date-item {
-  align-self: flex-end;
   -ms-flex-item-align: end;
+      align-self: flex-end;
   height: 1.4rem;
   margin-right: .2rem;
   margin-top: .2rem;
@@ -189,8 +175,9 @@
   right: 19px;
 }
 .calendar.calendar-lg .calendar-events {
-  flex-grow: 1;
-  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   line-height: 1;
   overflow-y: auto;
   padding: .2rem;
@@ -205,7 +192,8 @@
   overflow: hidden;
   padding: 3px 4px;
   text-align: left;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   vertical-align: baseline;
   white-space: nowrap;
 }
@@ -228,7 +216,8 @@
   padding-bottom: 56.25%;
 }
 .carousel .carousel-container .carousel-item {
-  animation: carousel-slideout 1s ease-in-out 1;
+  -webkit-animation: carousel-slideout 1s ease-in-out 1;
+          animation: carousel-slideout 1s ease-in-out 1;
   height: 100%;
   left: 0;
   margin: 0;
@@ -249,7 +238,11 @@
   opacity: 0;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
   transition: all .4s ease;
   z-index: 200;
 }
@@ -263,7 +256,8 @@
 .carousel .carousel-locator:nth-of-type(2):checked ~ .carousel-container .carousel-item:nth-of-type(2),
 .carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-container .carousel-item:nth-of-type(3),
 .carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-container .carousel-item:nth-of-type(4) {
-  animation: carousel-slidein .75s ease-in-out 1;
+  -webkit-animation: carousel-slidein .75s ease-in-out 1;
+          animation: carousel-slidein .75s ease-in-out 1;
   opacity: 1;
   z-index: 100;
 }
@@ -274,27 +268,27 @@
   color: #e7e9ed;
 }
 .carousel .carousel-nav {
-<<<<<<< HEAD
-  bottom: 1rem;
-=======
   bottom: .4rem;
-  display: -webkit-flex;
->>>>>>> upstream
-  display: flex;
+  display: -webkit-box;
   display: -ms-flexbox;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   left: 50%;
   position: absolute;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 10rem;
   z-index: 200;
 }
 .carousel .carousel-nav .nav-item {
   color: rgba(231, 233, 237, .5);
   display: block;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   height: 1.6rem;
   margin: .2rem;
   max-width: 2.5rem;
@@ -310,23 +304,51 @@
   width: 100%;
 }
 
-@keyframes carousel-slidein {
+@-webkit-keyframes carousel-slidein {
   0% {
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes carousel-slidein {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes carousel-slideout {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
 @keyframes carousel-slideout {
   0% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     opacity: 1;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -348,8 +370,10 @@
 .comparison-slider .comparison-before img,
 .comparison-slider .comparison-after img {
   height: 100%;
-  object-fit: none;
-  object-position: left center;
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: left center;
+     object-position: left center;
   position: absolute;
   width: 100%;
 }
@@ -379,21 +403,25 @@
 .comparison-slider .comparison-after::after {
   background: currentColor;
   border-radius: 50%;
-  box-shadow: 0 -5px, 0 5px;
+  -webkit-box-shadow: 0 -5px, 0 5px;
+          box-shadow: 0 -5px, 0 5px;
   color: #fff;
   content: "";
   height: 3px;
   position: absolute;
   right: .4rem;
   top: 50%;
-  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   width: 3px;
 }
 .comparison-slider .comparison-after .comparison-label {
   left: .8rem;
 }
 .comparison-slider .comparison-resizer {
-  animation: first-run 1.5s 1 ease-in-out;
+  -webkit-animation: first-run 1.5s 1 ease-in-out;
+          animation: first-run 1.5s 1 ease-in-out;
   cursor: ew-resize;
   height: .8rem;
   left: 0;
@@ -404,28 +432,23 @@
   position: relative;
   resize: horizontal;
   top: 50%;
-  transform: translateY(-50%) scaleY(30);
+  -webkit-transform: translateY(-50%) scaleY(30);
+      -ms-transform: translateY(-50%) scaleY(30);
+          transform: translateY(-50%) scaleY(30);
   width: 0;
 }
 .comparison-slider .comparison-label {
-<<<<<<< HEAD
-  background: fade(#454d5d, 50%);
-  bottom: 1.6rem;
-=======
   background: rgba(69, 77, 93, .5);
   bottom: .8rem;
->>>>>>> upstream
   color: #fff;
   padding: .2rem .4rem;
   position: absolute;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-<<<<<<< HEAD
 
-=======
 @-webkit-keyframes first-run {
   0% {
     width: 0;
@@ -443,7 +466,7 @@
     width: 0;
   }
 }
->>>>>>> upstream
+
 @keyframes first-run {
   0% {
     width: 0;
@@ -467,10 +490,11 @@
 }
 
 .filter .filter-body {
-  display: flex;
+  display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .filter .filter-tag#tag-all:checked ~ .filter-nav .chip[for="tag-all"],
@@ -491,17 +515,13 @@
 
 .meter {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: #f8f9fa;
   border: 0;
   border-radius: .1rem;
   display: block;
-<<<<<<< HEAD
-  height: 1.6rem; 
-=======
-  height: .8rem;
->>>>>>> upstream
+  height: .8rem; 
   width: 100%;
 }
 .meter::-webkit-meter-inner-element {
@@ -548,16 +568,15 @@
   width: auto;
 }
 .parallax .parallax-content {
-  box-shadow: 0 1rem 2.1rem rgba(69, 77, 93, .3);
+  -webkit-box-shadow: 0 1rem 2.1rem rgba(69, 77, 93, .3);
+          box-shadow: 0 1rem 2.1rem rgba(69, 77, 93, .3);
   height: auto;
-<<<<<<< HEAD
-  transform: perspective(100rem);
-=======
   -webkit-transform: perspective(1000px);
-  transform: perspective(1000px);
+          transform: perspective(1000px);
   -webkit-transform-style: preserve-3d;
->>>>>>> upstream
-  transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
   transition: all .4s ease;
   width: 100%;
 }
@@ -571,27 +590,26 @@
   width: 100%;
 }
 .parallax .parallax-front {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
-  display: flex;
+  display: -webkit-box;
   display: -ms-flexbox;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
+  display: flex;
   height: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   left: 0;
   position: absolute;
   text-align: center;
-<<<<<<< HEAD
-  text-shadow: 0 0 3rem fade(#454d5d, 95%);
-  top: 0;
-  transform: translateZ(10rem) scale(1-unit-less(.1));
-=======
   text-shadow: 0 0 20px rgba(69, 77, 93, .5);
   top: 0;
-  -webkit-transform: translateZ(100px) scale(.9);
-  transform: translateZ(100px) scale(.9);
->>>>>>> upstream
+  -webkit-transform: translateZ(100px) scale(1-unit-less(.1));
+          transform: translateZ(100px) scale(1-unit-less(.1));
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
   transition: all .4s ease;
   width: 100%;
   z-index: 1;
@@ -605,23 +623,17 @@
   z-index: 300;
 }
 .parallax .parallax-top-left:hover ~ .parallax-content {
-<<<<<<< HEAD
-  transform: perspective(100rem) rotateX(-3deg) rotateY(3deg);
-=======
   -webkit-transform: perspective(1000px) rotateX(-3deg) rotateY(3deg);
-  transform: perspective(1000px) rotateX(-3deg) rotateY(3deg);
->>>>>>> upstream
+          transform: perspective(1000px) rotateX(-3deg) rotateY(3deg);
 }
 .parallax .parallax-top-left:hover ~ .parallax-content::before {
+  background: -webkit-linear-gradient(315deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
+  background: -o-linear-gradient(315deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
   background: linear-gradient(135deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .parallax .parallax-top-left:hover ~ .parallax-content .parallax-front {
-<<<<<<< HEAD
-  transform: translate3d(-.65rem, -.65rem, 10rem) scale(1-unit-less(.1));
-=======
-  -webkit-transform: translate3d(-6.5px, -6.5px, 100px) scale(.9);
-  transform: translate3d(-6.5px, -6.5px, 100px) scale(.9);
->>>>>>> upstream
+  -webkit-transform: translate3d(-6.5px, -6.5px, 100px) scale(1-unit-less(.1));
+          transform: translate3d(-6.5px, -6.5px, 100px) scale(1-unit-less(.1));
 }
 .parallax .parallax-top-right {
   height: 50%;
@@ -632,23 +644,17 @@
   z-index: 300;
 }
 .parallax .parallax-top-right:hover ~ .parallax-content {
-<<<<<<< HEAD
-  transform: perspective(100rem) rotateX(-3deg) rotateY(-3deg);
-=======
   -webkit-transform: perspective(1000px) rotateX(-3deg) rotateY(-3deg);
-  transform: perspective(1000px) rotateX(-3deg) rotateY(-3deg);
->>>>>>> upstream
+          transform: perspective(1000px) rotateX(-3deg) rotateY(-3deg);
 }
 .parallax .parallax-top-right:hover ~ .parallax-content::before {
+  background: -webkit-linear-gradient(225deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
+  background: -o-linear-gradient(225deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
   background: linear-gradient(-135deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .parallax .parallax-top-right:hover ~ .parallax-content .parallax-front {
-<<<<<<< HEAD
-  transform: translate3d(.65rem, -.65rem, 10rem) scale(1-unit-less(.1));
-=======
-  -webkit-transform: translate3d(6.5px, -6.5px, 100px) scale(.9);
-  transform: translate3d(6.5px, -6.5px, 100px) scale(.9);
->>>>>>> upstream
+  -webkit-transform: translate3d(6.5px, -6.5px, 100px) scale(1-unit-less(.1));
+          transform: translate3d(6.5px, -6.5px, 100px) scale(1-unit-less(.1));
 }
 .parallax .parallax-bottom-left {
   bottom: 0;
@@ -659,23 +665,17 @@
   z-index: 300;
 }
 .parallax .parallax-bottom-left:hover ~ .parallax-content {
-<<<<<<< HEAD
-  transform: perspective(100rem) rotateX(3deg) rotateY(3deg);
-=======
   -webkit-transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
-  transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
->>>>>>> upstream
+          transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
 }
 .parallax .parallax-bottom-left:hover ~ .parallax-content::before {
+  background: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
+  background: -o-linear-gradient(45deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
   background: linear-gradient(45deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .parallax .parallax-bottom-left:hover ~ .parallax-content .parallax-front {
-<<<<<<< HEAD
-  transform: translate3d(-.65rem, .65rem, 10rem) scale(1-unit-less(.1));
-=======
-  -webkit-transform: translate3d(-6.5px, 6.5px, 100px) scale(.9);
-  transform: translate3d(-6.5px, 6.5px, 100px) scale(.9);
->>>>>>> upstream
+  -webkit-transform: translate3d(-6.5px, 6.5px, 100px) scale(1-unit-less(.1));
+          transform: translate3d(-6.5px, 6.5px, 100px) scale(1-unit-less(.1));
 }
 .parallax .parallax-bottom-right {
   bottom: 0;
@@ -686,29 +686,23 @@
   z-index: 300;
 }
 .parallax .parallax-bottom-right:hover ~ .parallax-content {
-<<<<<<< HEAD
-  transform: perspective(100rem) rotateX(3deg) rotateY(-3deg);
-=======
   -webkit-transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
-  transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
->>>>>>> upstream
+          transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
 }
 .parallax .parallax-bottom-right:hover ~ .parallax-content::before {
+  background: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
+  background: -o-linear-gradient(135deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
   background: linear-gradient(-45deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .parallax .parallax-bottom-right:hover ~ .parallax-content .parallax-front {
-<<<<<<< HEAD
-  transform: translate3d(.65rem, .65rem, 10rem) scale(1-unit-less(.1));
-=======
-  -webkit-transform: translate3d(6.5px, 6.5px, 100px) scale(.9);
-  transform: translate3d(6.5px, 6.5px, 100px) scale(.9);
->>>>>>> upstream
+  -webkit-transform: translate3d(6.5px, 6.5px, 100px) scale(1-unit-less(.1));
+          transform: translate3d(6.5px, 6.5px, 100px) scale(1-unit-less(.1));
 }
 
 .progress {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: #f0f1f4;
   border: 0;
   border-radius: .1rem;
@@ -730,11 +724,24 @@
   border-radius: .1rem;
 }
 .progress:indeterminate {
-  animation: progress-indeterminate 1.5s linear infinite;
+  -webkit-animation: progress-indeterminate 1.5s linear infinite;
+          animation: progress-indeterminate 1.5s linear infinite;
+  background: #f0f1f4 -webkit-gradient(linear, left top, right top, color-stop(30%, #5764c6), color-stop(30%, #f0f1f4)) top left/150% 150% no-repeat;
+  background: #f0f1f4 -webkit-linear-gradient(left, #5764c6 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
+  background: #f0f1f4 -o-linear-gradient(left, #5764c6 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
   background: #f0f1f4 linear-gradient(to right, #5764c6 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
 }
 .progress:indeterminate::-moz-progress-bar {
   background: transparent;
+}
+
+@-webkit-keyframes progress-indeterminate {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 @keyframes progress-indeterminate {
@@ -748,19 +755,16 @@
 
 .slider {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: transparent;
   display: block;
-<<<<<<< HEAD
-  height: 2.4rem; 
-=======
-  height: 1.2rem;
->>>>>>> upstream
+  height: 1.2rem; 
   width: 100%;
 }
 .slider:focus {
-  box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
+  -webkit-box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
+          box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
   outline: none;
 }
 .slider::-webkit-slider-thumb {
@@ -768,65 +772,55 @@
   background: #5764c6;
   border: 0;
   border-radius: 50%;
-<<<<<<< HEAD
-  height: 1.2rem;
-  margin-top: -.5rem;
-  transition: transform .2s ease;
-  width: 1.2rem;
-=======
   height: .6rem;
   margin-top: -.25rem;
-  transition: transform .2s ease, -webkit-transform .2s ease;
-  transition: transform .2s ease;
+  -webkit-transition: -webkit-transform .2s ease;
   transition: -webkit-transform .2s ease;
+  -o-transition: transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
   width: .6rem;
->>>>>>> upstream
 }
 .slider::-moz-range-thumb {
   background: #5764c6;
   border: 0;
   border-radius: 50%;
-<<<<<<< HEAD
-  height: 1.2rem;
-  transition: transform .2s ease;
-  width: 1.2rem;
-=======
   height: .6rem;
-  transition: transform .2s ease, -webkit-transform .2s ease;
-  transition: transform .2s ease;
+  -webkit-transition: -webkit-transform .2s ease;
   transition: -webkit-transform .2s ease;
+  -o-transition: transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
   width: .6rem;
->>>>>>> upstream
 }
 .slider::-ms-thumb {
   background: #5764c6;
   border: 0;
   border-radius: 50%;
-<<<<<<< HEAD
-  height: 1.2rem;
-  transition: transform .2s ease;
-  width: 1.2rem;
-=======
   height: .6rem;
-  transition: transform .2s ease, -webkit-transform .2s ease;
-  transition: transform .2s ease;
+  -webkit-transition: -webkit-transform .2s ease;
   transition: -webkit-transform .2s ease;
+  -o-transition: transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
   width: .6rem;
->>>>>>> upstream
 }
 .slider:active::-webkit-slider-thumb {
-  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .slider:active::-moz-range-thumb {
   transform: scale(1.25);
 }
 .slider:active::-ms-thumb {
-  transform: scale(1.25);
+  -ms-transform: scale(1.25);
+      transform: scale(1.25);
 }
 .slider:disabled::-webkit-slider-thumb,
 .slider.disabled::-webkit-slider-thumb {
   background: #e7e9ed;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .slider:disabled::-moz-range-thumb,
 .slider.disabled::-moz-range-thumb {
@@ -836,7 +830,8 @@
 .slider:disabled::-ms-thumb,
 .slider.disabled::-ms-thumb {
   background: #e7e9ed;
-  transform: scale(1);
+  -ms-transform: scale(1);
+      transform: scale(1);
 }
 .slider::-webkit-slider-runnable-track {
   background: #f0f1f4;
@@ -861,14 +856,10 @@
 }
 
 .timeline .timeline-item {
-  display: flex;
+  display: -webkit-box;
   display: -ms-flexbox;
-<<<<<<< HEAD
-  margin-bottom: 2.4rem;
-=======
-  display: -webkit-flex;
+  display: flex;
   margin-bottom: 1.2rem;
->>>>>>> upstream
   position: relative;
 }
 .timeline .timeline-item::before {
@@ -881,12 +872,14 @@
   width: 2px;
 }
 .timeline .timeline-item .timeline-left {
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .timeline .timeline-item .timeline-content {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding: 2px 0 2px .8rem;
 }
 .timeline .timeline-item .timeline-icon {

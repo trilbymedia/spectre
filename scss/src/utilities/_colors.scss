@@ -1,0 +1,45 @@
+// Text colors
+.text-primary {
+  @include text-color-variant($primary-color);
+}
+.text-secondary {
+  @include text-color-variant($secondary-color-dark);
+}
+.text-gray {
+  @include text-color-variant($gray-color);
+}
+.text-light {
+  @include text-color-variant($light-color);
+}
+.text-success {
+  @include text-color-variant($control-color-success);
+}
+.text-warning {
+  @include text-color-variant($control-color-warning);
+}
+.text-error {
+  @include text-color-variant($control-color-error);
+}
+
+// Background colors
+.bg-primary {
+  @include bg-color-variant($primary-color);
+}
+.bg-secondary {
+  @include bg-color-variant($secondary-color);
+}
+.bg-dark {
+  @include bg-color-variant($dark-color);
+}
+.bg-gray {
+  @include bg-color-variant($bg-color);
+}
+.bg-success {
+  @include bg-color-variant($control-color-success);
+}
+.bg-warning {
+  @include bg-color-variant($control-color-warning);
+}
+.bg-error {
+  @include bg-color-variant($control-color-error);
+}

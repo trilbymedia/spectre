@@ -1,4 +1,22 @@
-// Core mixins
+// Mixins
+
+// Strip Units
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Avatar mixin
+@mixin avatar-base($size: $unit-8) {
+  font-size: $size / 2.2;
+  height: $size;
+  width: $size;
+}
+
+// Clearfix mixin
 @mixin clearfix() {
   &::after {
     clear: both;
@@ -9,7 +27,7 @@
 
 // Component focus shadow
 @mixin control-shadow($color: $primary-color) {
-  box-shadow: 0 0 0 .2rem rgba($color, .15);
+  box-shadow: 0 0 0 .1rem rgba($color, .2);
 }
 
 // Component transition
@@ -28,7 +46,7 @@
   border-radius: $border-radius;
   display: inline-block;
   line-height: 1;
-  padding: .3rem .4rem;
+  padding: .2em .3em;
   vertical-align: baseline;
 }
 
@@ -37,6 +55,76 @@
   color: $color;
 }
 
+// Shadow mixin
 @mixin shadow-variant($offset) {
-  box-shadow: 0 $offset ($offset+.1rem)*2 rgba($dark-color, 0.3);
+  box-shadow: 0 $offset ($offset + .05rem) * 2 rgba($dark-color, .3);
+}
+
+// Position utility mixin
+@mixin margin-variant($size: 1) {
+  .m-#{$size} {
+    padding: $size * $unit-1;
+  }
+  .mb-#{$size} {
+    padding-bottom: $size * $unit-1;
+  }
+  .ml-#{$size} {
+    padding-left: $size * $unit-1;
+  }
+  .mr-#{$size} {
+    padding-right: $size * $unit-1;
+  }
+  .mt-#{$size} {
+    padding-top: $size * $unit-1;
+  }
+  .mx-#{$size} {
+    padding-left: $size * $unit-1;
+    padding-right: $size * $unit-1;
+  }
+  .my-#{$size} {
+    padding-bottom: $size * $unit-1;
+    padding-top: $size * $unit-1;
+  }
+}
+
+@mixin padding-variant($size: 1) {
+  .p-#{$size} {
+    padding: $size * $unit-1;
+  }
+  .pb-#{$size} {
+    padding-bottom: $size * $unit-1;
+  }
+  .pl-#{$size} {
+    padding-left: $size * $unit-1;
+  }
+  .pr-#{$size} {
+    padding-right: $size * $unit-1;
+  }
+  .pt-#{$size} {
+    padding-top: $size * $unit-1;
+  }
+  .px-#{$size} {
+    padding-left: $size * $unit-1;
+    padding-right: $size * $unit-1;
+  }
+  .py-#{$size} {
+    padding-bottom: $size * $unit-1;
+    padding-top: $size * $unit-1;
+  }
+}
+
+// Colors mixin
+@mixin text-color-variant($color: $primary-color) {
+  color: $color;
+
+  a#{&} {
+    &:focus,
+    &:hover {
+      color: darken($color, 5%);
+    }
+  }
+}
+
+@mixin bg-color-variant($color: $primary-color) {
+  background: $color;
 }

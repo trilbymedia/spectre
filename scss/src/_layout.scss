@@ -2,30 +2,39 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: $layout-padding;
-  padding-right: $layout-padding;
+  padding-left: $layout-spacing;
+  padding-right: $layout-spacing;
   width: 100%;
   @extend .clearfix;
 
-  &.grid-1280 {
-    max-width: 128rem + 2 * $layout-padding;
+  &.grid-xl {
+    max-width: $size-xl + 2 * strip-unit($layout-spacing) * $html-font-size;
   }
 
-  &.grid-960 {
-    max-width: 96rem + 2 * $layout-padding;
+  &.grid-lg {
+    max-width: $size-lg + 2 * strip-unit($layout-spacing) * $html-font-size;
   }
 
-  &.grid-480 {
-    max-width: 48rem + 2 * $layout-padding;
+  &.grid-md {
+    max-width: $size-md + 2 * strip-unit($layout-spacing) * $html-font-size;
+  }
+
+  &.grid-sm {
+    max-width: $size-sm + 2 * strip-unit($layout-spacing) * $html-font-size;
+  }
+
+  &.grid-xs {
+    max-width: $size-xs + 2 * strip-unit($layout-spacing) * $html-font-size;
   }
 }
 
 // Responsive grid system
 .columns {
   display: flex;
+  display: -webkit-flex;
   flex-wrap: wrap;
-  margin-left: -$layout-padding;
-  margin-right: -$layout-padding;
+  margin-left: -$layout-spacing;
+  margin-right: -$layout-spacing;
 
   &.col-gapless {
     margin-left: 0;
@@ -44,7 +53,8 @@
 .column {
   flex: 1;
   max-width: 100%;
-  padding: $layout-padding;
+  padding-left: $layout-spacing;
+  padding-right: $layout-spacing;
 
   &.col-12,
   &.col-11,

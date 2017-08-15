@@ -1,16 +1,17 @@
 // Parallax
 $parallax-deg: 3deg;
-$parallax-offset: .65rem;
-$parallax-offset-z: 10rem;
+$parallax-offset: 6.5px;
+$parallax-offset-z: 100px;
+$parallax-perspective: 1000px;
+$parallax-scale: 1 - unit-less($parallax-offset-z / $parallax-perspective);
 
-$parallax-perspective: 100rem;
+// Mixin: Parallax direction
 @mixin parallax-dir() {
   height: 50%;
   position: absolute;
   width: 50%;
   z-index: $zindex-3;
 }
-$parallax-scale: 1 - unit-less($parallax-offset-z / $parallax-perspective);
 
 .parallax {
   display: block;
@@ -20,7 +21,7 @@ $parallax-scale: 1 - unit-less($parallax-offset-z / $parallax-perspective);
 
   .parallax-content {
     height: auto;
-    @include shadow-variant(2rem);
+    @include shadow-variant(1rem);
     transform: perspective($parallax-perspective);
     transform-style: preserve-3d;
     transition: all .4s ease;
@@ -46,7 +47,7 @@ $parallax-scale: 1 - unit-less($parallax-offset-z / $parallax-perspective);
     left: 0;
     position: absolute;
     text-align: center;
-    text-shadow: 0 0 3rem fade($dark-color, 95%);
+    text-shadow: 0 0 20px rgba($dark-color, .5);
     top: 0;
     transform: translateZ($parallax-offset-z) scale($parallax-scale);
     transition: all .4s ease;
@@ -126,4 +127,5 @@ $parallax-scale: 1 - unit-less($parallax-offset-z / $parallax-perspective);
     }
   }
 }
+
 

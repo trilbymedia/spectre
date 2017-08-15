@@ -1,14 +1,12 @@
 // Progress
 // Credit: https://css-tricks.com/html5-progress-element/
 .progress {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background: $bg-color-dark;
   border: 0;
   border-radius: $border-radius;
   color: $primary-color;
-  height: .4rem;
+  height: $unit-1;
   position: relative;
   width: 100%;
 
