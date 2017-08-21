@@ -7,6 +7,10 @@
     @include label-variant($light-color, $primary-color);
   }
 
+  &.label-secondary {
+    @include label-variant($primary-color, $secondary-color);
+  }
+
   &.label-success {
     @include label-variant($light-color, $control-color-success);
   }
