@@ -2,7 +2,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
-    "gulp-clean-css": "^3.0.3",
+    "gulp-clean-css": "^3.7.0",
     "gulp-csscomb": "^3.0.8",
     "gulp-ignore": "latest",
     "gulp-rename": "^1.2.2",
@@ -10,6 +10,6 @@
     "gulp-sourcemaps": "latest"
   },
   "browserslist": [
-    "last 4 versions"
+    "last 4 versions", "Explorer >= 10", "Firefox ESR"
   ]
 }
