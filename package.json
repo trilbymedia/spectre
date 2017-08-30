@@ -10,6 +10,8 @@
     "gulp-sourcemaps": "latest"
   },
   "browserslist": [
-    "last 4 versions", "Explorer >= 10", "Firefox ESR"
+    "last 4 versions",
+    "Explorer >= 10",
+    "Firefox ESR"
   ]
 }

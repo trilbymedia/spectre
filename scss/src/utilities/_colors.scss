@@ -12,13 +12,13 @@
   @include text-color-variant($light-color);
 }
 .text-success {
-  @include text-color-variant($control-color-success);
+  @include text-color-variant($success-color);
 }
 .text-warning {
-  @include text-color-variant($control-color-warning);
+  @include text-color-variant($warning-color);
 }
 .text-error {
-  @include text-color-variant($control-color-error);
+  @include text-color-variant($error-color);
 }
 
 // Background colors
@@ -35,11 +35,11 @@
   @include bg-color-variant($bg-color);
 }
 .bg-success {
-  @include bg-color-variant($control-color-success);
+  @include bg-color-variant($success-color);
 }
 .bg-warning {
-  @include bg-color-variant($control-color-warning);
+  @include bg-color-variant($warning-color);
 }
 .bg-error {
-  @include bg-color-variant($control-color-error);
+  @include bg-color-variant($error-color);
 }

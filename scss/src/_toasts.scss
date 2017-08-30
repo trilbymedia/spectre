@@ -13,15 +13,15 @@
   }
 
   &.toast-success {
-    @include toast-variant($control-color-success);
+    @include toast-variant($success-color);
   }
 
   &.toast-warning {
-    @include toast-variant($control-color-warning);
+    @include toast-variant($warning-color);
   }
 
   &.toast-error {
-    @include toast-variant($control-color-error);
+    @include toast-variant($error-color);
   }
 
   a {

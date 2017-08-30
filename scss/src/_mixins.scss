@@ -11,9 +11,69 @@
 
 // Avatar mixin
 @mixin avatar-base($size: $unit-8) {
-  font-size: $size / 2.2;
+  font-size: $size / 2;
   height: $size;
   width: $size;
+}
+
+// Background color utility mixin
+@mixin bg-color-variant($color: $primary-color) {
+  background: $color;
+}
+
+// Button variant mixin
+@mixin button-variant($color: $primary-color) {
+  background: $color;
+  border-color: darken($color, 3%);
+  color: $light-color;
+  &:focus {
+    @include control-shadow($color);
+  }
+  &:focus,
+  &:hover {
+    background: darken($color, 2%);
+    border-color: darken($color, 5%);
+    color: $light-color;
+  }
+  &:active,
+  &.active {
+    background: darken($color, 7%);
+    border-color: darken($color, 10%);
+    color: $light-color;
+  }
+  &.loading {
+    &::after {
+      border-bottom-color: $light-color;
+      border-left-color: $light-color;
+    }
+  }
+}
+
+@mixin button-outline-variant($color: $primary-color) {
+  background: $light-color;
+  border-color: $color;
+  color: $color;
+  &:focus {
+    @include control-shadow($color);
+  }
+  &:focus,
+  &:hover {
+    background: lighten($color, 50%);
+    border-color: darken($color, 2%);
+    color: $color;
+  }
+  &:active,
+  &.active {
+    background: $color;
+    border-color: darken($color, 5%);
+    color: $light-color;
+  }
+  &.loading {
+    &::after {
+      border-bottom-color: $color;
+      border-left-color: $color;
+    }
+  }
 }
 
 // Clearfix mixin
@@ -35,19 +95,11 @@
   transition: all .2s ease;
 }
 
-// Toast variant
-@mixin toast-variant($color: $dark-color) {
-  background: rgba($color, .9);
-  border-color: $color;
-}
-
 // Label base style
 @mixin label-base() {
   border-radius: $border-radius;
-  display: inline-block;
-  line-height: 1.2;
-  padding: .1em .3em;
-  vertical-align: baseline;
+  line-height: 1;
+  padding: .15rem .2rem;
 }
 
 @mixin label-variant($color: $light-color, $bg-color: $primary-color) {
@@ -55,12 +107,7 @@
   color: $color;
 }
 
-// Shadow mixin
-@mixin shadow-variant($offset) {
-  box-shadow: 0 $offset ($offset + .05rem) * 2 rgba($dark-color, .3);
-}
-
-// Position utility mixin
+// Margin utility mixin
 @mixin margin-variant($id: 1, $size: 1) {
   .m-#{$id} {
     margin: $size;
@@ -87,6 +134,7 @@
   }
 }
 
+// Padding utility mixin
 @mixin padding-variant($id: 1, $size: 1) {
   .p-#{$id} {
     padding: $size;
@@ -113,7 +161,12 @@
   }
 }
 
-// Colors mixin
+// Shadow mixin
+@mixin shadow-variant($offset) {
+  box-shadow: 0 $offset ($offset + .05rem) * 2 rgba($dark-color, .3);
+}
+
+// Text color utility mixin
 @mixin text-color-variant($color: $primary-color) {
   color: $color;
 
@@ -125,6 +178,8 @@
   }
 }
 
-@mixin bg-color-variant($color: $primary-color) {
-  background: $color;
+// Toast variant mixin
+@mixin toast-variant($color: $dark-color) {
+  background: rgba($color, .9);
+  border-color: $color;
 }
